@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<section class="py-5 bg-light text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Our Causes</h1>
+    <p class="lead mt-3">
+      We are committed to driving real change in education, healthcare, women empowerment, and more.
+    </p>
+    <a href="#causes-list" class="btn btn-primary mt-3">Explore Our Work</a>
+
+  </div>
+</section>
+
+
+{% comment %} <h2>Our Causes</h2> {% endcomment %}
+    <h2 class="display-4 fw-bold">Area we work on </h2>
+
+{% for cause in causes %}
+  <div class="card mb-4">
+    <div class="row g-0 d-flex align-items-center flex-column flex-lg-row-reverse">
+      
+      {% if cause.image %}
+      <div class="col-lg-5 text-center">
+        <img src="{{ cause.image.url }}" alt="{{ cause.title }}" class="img-fluid rounded-end w-100" />
+      </div>
+      {% endif %}
+
+      <div class="col-lg-7 p-4">
+        <div class="card-body">
+          <h5 class="card-title">{{ cause.title }}</h5>
+          <p class="card-text">{{ cause.description }}</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+{% endfor %}
+
+
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold">Our Impact</h2>
+    <div class="row g-4">
+      
+      <div class="col-md-3">
+        <h3 class="fw-bold text-primary">5,000+</h3>
+        <p>Children Educated</p>
+      </div>
+
+      <div class="col-md-3">
+        <h3 class="fw-bold text-success">30+</h3>
+        <p>Health Camps Held</p>
+      </div>
+
+      <div class="col-md-3">
+        <h3 class="fw-bold text-warning">1,200+</h3>
+        <p>Women Empowered</p>
+      </div>
+
+      <div class="col-md-3">
+        <h3 class="fw-bold text-danger">50+</h3>
+        <p>Villages Transformed</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">What People Say</h2>
+    <div class="row g-4">
+      
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"This NGO changed my life. Thanks to them, I got access to education I never dreamed of."</p>
+            <h6 class="card-subtitle text-muted mt-3">— Rani, Beneficiary</h6>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"Volunteering here has been the most fulfilling experience of my life."</p>
+            <h6 class="card-subtitle text-muted mt-3">— Arjun, Volunteer</h6>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"I trust this NGO. Their work is transparent, impactful, and consistent."</p>
+            <h6 class="card-subtitle text-muted mt-3">— Meera, Donor</h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-primary text-white text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-3">You Can Make a Difference</h2>
+    <p class="lead mb-4">Join hands with us to bring change — whether by donating, volunteering, or spreading the word.</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="/donate/" class="btn btn-light btn-lg">Donate Now</a>
+      <a href="/about/" class="btn btn-outline-light btn-lg">Become a Volunteer</a>
+      <a href="/contact/" class="btn btn-light btn-lg">Partner With Us</a>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

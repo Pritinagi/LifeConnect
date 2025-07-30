@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="py-5 bg-light text-dark text-center mb-2">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Get in Touch</h1>
+    <p class="lead mt-3">
+      Have questions, suggestions, or want to collaborate? We're here to listen and connect.
+    </p>
+    <p class="mt-2">
+      Reach out to us anytime — your voice matters.
+    </p>
+  </div>
+</section>
+
+  {% if success %}
+    <div class="alert alert-success">Thank you for reaching out!</div>
+  {% endif %}
+
+ <form method="post" class="mx-auto p-4 bg-light rounded-3 shadow-sm" style="max-width: 700px;">
+  <h3 class="text-center align-middle text-muted">Your info here</h3>
+    {% csrf_token %}
+    <table class="table table-borderless">
+        
+      {% for field in form %}
+        <tr>
+          <th class="align-middle text-muted" style="width: 30%;">{{ field.label_tag }}</th>
+          <td>
+            {{ field }}
+            {% if field.errors %}
+              <div class="text-danger small mt-1">{{ field.errors }}</div>
+            {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+    <div class="text-center mt-3">
+      <button type="submit" class="btn btn-primary px-4 py-2 fw-medium">Send Message</button>
+    </div>
+</form>
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Our Contact Details</h2>
+    <div class="row text-center g-4">
+
+      <div class="col-md-4">
+        <div class="p-4 border rounded h-100 shadow-sm">
+          <h5 class="fw-bold mb-2">📍 Address</h5>
+          <p class="mb-0">123 Hope Street, Near Community Center,<br>New Delhi, India - 110001</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 border rounded h-100 shadow-sm">
+          <h5 class="fw-bold mb-2">📞 Phone</h5>
+          <p class="mb-1">+91 98765 43210</p>
+          <p class="mb-0">+91 91234 56789</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-4 border rounded h-100 shadow-sm">
+          <h5 class="fw-bold mb-2">✉️ Email</h5>
+          <p class="mb-1">info@yourngo.org</p>
+          <p class="mb-0">support@yourngo.org</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Connect With Us</h2>
+    <p class="mb-4">Follow us on social media to stay updated and spread the word.</p>
+    
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="https://facebook.com/yourngo" class="btn btn-outline-primary">
+        <i class="bi bi-facebook me-2"></i>Facebook
+      </a>
+      <a href="https://instagram.com/yourngo" class="btn btn-outline-danger">
+        <i class="bi bi-instagram me-2"></i>Instagram
+      </a>
+      <a href="https://linkedin.com/company/yourngo" class="btn btn-outline-info">
+        <i class="bi bi-linkedin me-2"></i>LinkedIn
+      </a>
+      <a href="https://wa.me/919876543210" class="btn btn-outline-success">
+        <i class="bi bi-whatsapp me-2"></i>WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Quick Help</h2>
+
+    <div class="accordion" id="quickHelpAccordion">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="quick1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+            How can I volunteer?
+          </button>
+        </h2>
+        <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#quickHelpAccordion">
+          <div class="accordion-body">
+            Fill out our volunteer form on the website or email us directly. We'll connect with you shortly.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="quick2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+            How do I donate?
+          </button>
+        </h2>
+        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#quickHelpAccordion">
+          <div class="accordion-body">
+            Use our "Donate" page to contribute securely online or contact us for offline donations.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="quick3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+            Can I partner with your NGO?
+          </button>
+        </h2>
+        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#quickHelpAccordion">
+          <div class="accordion-body">
+            Yes! We welcome CSR partnerships and collaborations. Contact us to discuss your goals.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

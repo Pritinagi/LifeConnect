@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block content %}
+   <section class="hero-section py-5 d-flex align-items-center text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Welcome to <span class="text-info">MyNGO</span></h1>
+            <p class="lead mb-4">Making a difference, one cause at a time.</p>
+            <a href="/causes/" class="btn btn-info btn-lg mx-2">View Our Causes</a>
+            <a href="/donate/" class="btn btn-primary btn-lg mx-2">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Us</h2>
+            <p class="text-center mx-auto" style="max-width: 600px;">
+                MyNGO is dedicated to creating positive change through education, healthcare, and community development. Our core values of compassion, integrity, and impact drive everything we do.
+            </p>
+            <div class="text-center">
+                <a href="/about/" class="btn btn-outline-primary">Learn More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Causes Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Causes</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card cause-card">
+                        <img src="https://yt3.googleusercontent.com/jXLFjWAujT-uDtP02QF5Bx8m15dL1-QTmj6_53fpW1qWstp4uOJfLsoptWPuhN8jfYQbZX0XKg=s900-c-k-c0x00ffffff-no-rj" class="card-img-top" alt="Education">
+                        <div class="card-body">
+                            <h5 class="card-title">Education for All</h5>
+                            <p class="card-text">Providing access to quality education for underprivileged children.</p>
+                            <a href="/causes/education/" class="btn btn-info">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card cause-card">
+                        <img src="https://www.osmosis.org/blog/wp-content/uploads/sites/2/2024/09/health-care-access-and-quality.webp" class="card-img-top" alt="Healthcare">
+                        <div class="card-body">
+                            <h5 class="card-title">Healthcare Access</h5>
+                            <p class="card-text">Delivering essential medical services to underserved communities.</p>
+                            <a href="/causes/healthcare/" class="btn btn-info">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card cause-card">
+                        <img src="https://media.licdn.com/dms/image/v2/D5612AQFRglwxBMjoJg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1695875036903?e=2147483647&v=beta&t=DwmwxjEsU_TogbScWg16ZAFA3YIHsQQVV0JA42DEgew" class="card-img-top" alt="Community">
+                        <div class="card-body">
+                            <h5 class="card-title">Community Development</h5>
+                            <p class="card-text">Empowering communities through sustainable projects.</p>
+                            <a href="/causes/community/" class="btn btn-info">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-5 impact-section">
+        <div class="container text-center">
+            <h2 class="mb-4">Our Impact</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h3 class="fw-bold">500+</h3>
+                    <p>Children educated through our programs.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="fw-bold">20+</h3>
+                    <p>Villages supported with clean water.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="fw-bold">10,000+</h3>
+                    <p>People reached with healthcare services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Get Involved</h2>
+            <p class="mx-auto mb-4" style="max-width: 600px;">
+                Join us by volunteering your time, sharing your skills, or making a donation to support our mission.
+            </p>
+            <a href="/about/" class="btn btn-primary btn-lg mx-2">Volunteer Now</a>
+            <a href="/donate/" class="btn btn-outline-primary btn-lg mx-2">Donate</a>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Upcoming Events</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Charity Run 2025</h5>
+                            <p class="card-text">Join our annual charity run to raise funds for education. Date: August 15, 2025.</p>
+                            <a href="/events/charity-run/" class="btn btn-info">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Community Cleanup</h5>
+                            <p class="card-text">Help clean our local parks. Date: September 10, 2025.</p>
+                            <a href="/events/cleanup/" class="btn btn-info">Join Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 testimonial-section">
+        <div class="container">
+            <h2 class="text-center mb-4">What People Say</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"MyNGO changed my life by providing access to education."</p>
+                        <footer class="blockquote-footer mt-2">Sarah, Beneficiary</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-6">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"Volunteering with MyNGO was a rewarding experience."</p>
+                        <footer class="blockquote-footer mt-2">John, Volunteer</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Stay Updated</h2>
+            <p class="mx-auto mb-4" style="max-width: 600px;">
+                Subscribe to our newsletter for updates on our impact and upcoming events.
+            </p>
+            <div class="mx-auto" style="max-width: 400px;">
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email">
+                    <button class="btn btn-primary" type="button" onclick="alert('Subscribed!')">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
